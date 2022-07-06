@@ -22,6 +22,6 @@
 [출처](https://github.com/steve-developer/fastcampus-springboot-introduction/blob/master/05.%20Spring%20%EC%A1%B0%EA%B8%88%20%EB%8D%94%20%EB%93%A4%EC%97%AC%EB%8B%A4%EB%B3%B4%EA%B8%B0/%EA%B0%95%EC%9D%98%EC%9E%90%EB%A3%8C/03.%20AOP/03.%20AOP.pdf)
 
 ### 예제설명 ###
-* AOP는 실무에서 log를 사용할때 
+* AOP는 실무에서 Method parameter log와 실행시간 log를 출력한다.
 * ParameterAop.java 에서는 request 파라미터와 response 결과를 print한다.
 * TimerAop.java에서는 
