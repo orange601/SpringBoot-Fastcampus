@@ -30,7 +30,7 @@
 * TimerAop.java에서는 method의 실행시간을 출력한다.
 
 
-## 2장. AOP ##
+## 3장. Validation ##
 ### 관점지향 프로그램 ###
 ### 예제설명 ###
 
