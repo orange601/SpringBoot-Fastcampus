@@ -20,7 +20,8 @@
 ## 2장. AOP ##
 
 ### 관점지향 프로그램 ###
-![2022-07-06 14 28 29](https://user-images.githubusercontent.com/24876345/177475501-ea53b915-8d04-400b-bc90-7fc191073808.png)
+![2022-07-06 14 28 29](https://user-images.githubusercontent.com/24876345/177677329-e3bcb689-ac1c-45a6-8745-83988ca80e6a.png)
+
 [출처](https://github.com/steve-developer/fastcampus-springboot-introduction/blob/master/05.%20Spring%20%EC%A1%B0%EA%B8%88%20%EB%8D%94%20%EB%93%A4%EC%97%AC%EB%8B%A4%EB%B3%B4%EA%B8%B0/%EA%B0%95%EC%9D%98%EC%9E%90%EB%A3%8C/03.%20AOP/03.%20AOP.pdf)
 
 ### 예제설명 ###
