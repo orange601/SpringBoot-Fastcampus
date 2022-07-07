@@ -9,6 +9,8 @@
 
 [3.Validation](#3장-Validation)
 
+[4.Exception](#4장-Exception)
+
 ## 1장. IOC, DI ##
 
 ### 제어의 역전 ###
@@ -40,3 +42,4 @@
 * BindingResult 파라미터로 @Valid의 결과 값을 확인 할 수 있다.
 
 
+## 4장 Exception ##
