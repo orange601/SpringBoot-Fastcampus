@@ -43,3 +43,6 @@
 
 
 ## 4장 Exception ##
+![2022-07-07 11 45 06](https://user-images.githubusercontent.com/24876345/177679354-87256f5c-dfb3-43fa-8d43-766898c0d7e0.png)
+
+![2022-07-072](https://user-images.githubusercontent.com/24876345/177679376-5ddf97ad-88f7-4b4d-8118-1427b5bb0cf1.png)
