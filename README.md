@@ -31,6 +31,8 @@
 
 
 ## 3장. Validation ##
+![2022-07-07 11 15 38](https://user-images.githubusercontent.com/24876345/177676055-44198a35-4571-4a6e-ba7c-73149f49a7b4.png)
+
 
 ### 예제설명 ###
 * BindingResult 파라미터로 @Valid의 결과 값을 확인 할 수 있다.
