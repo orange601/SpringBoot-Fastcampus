@@ -7,6 +7,8 @@
 
 [2.AOP](#2장-AOP)
 
+[3.Validation](#3장-Validation)
+
 ## 1장. IOC, DI ##
 
 ### 제어의 역전 ###
@@ -26,3 +28,10 @@
 * 또한 method의 실행시간을 가지고 서버의 부하와 서버의 상태를 log를 출력한다. 
 * ParameterAop.java 에서는 request 파라미터와 response 결과를 log로 한다.
 * TimerAop.java에서는 method의 실행시간을 출력한다.
+
+
+## 2장. AOP ##
+### 관점지향 프로그램 ###
+### 예제설명 ###
+
+
