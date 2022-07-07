@@ -31,7 +31,12 @@
 
 
 ## 3장. Validation ##
-### 관점지향 프로그램 ###
+
+### Service Logic과 분리 ###
+* 단순하게 반복되는 코드가 발생한다.
+* Servivce 
+
 ### 예제설명 ###
+* BindingResult 파라미터로 @Valid의 결과 값을 확인 할 수 있다.
 
 
