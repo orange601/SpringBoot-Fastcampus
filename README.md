@@ -47,8 +47,7 @@
 ````java
   implementation 'org.springframework.boot:spring-boot-starter-validation'
 ````
-* @Valid Collection Validation 사용관련
-* https://github.com/HomoEfficio/dev-tips/wiki/SpringMVC%EC%97%90%EC%84%9C-Collection%EC%9D%98-Validation
+* parameter가 List로 Binding되면 @Valid는 작동하지 않는다.
 
 
 ## 4장 Exception ##
