@@ -41,6 +41,15 @@
 ### 예제설명 ###
 * BindingResult 파라미터로 @Valid의 결과 값을 확인 할 수 있다.
 
+### 주의사항 ###
+* spring boot 2.3 version 이상부터는 spring-boot-starter-web 의존성 내부에 있던 validation이 사라졌다.
+* spring boot version이 2.3 이상이라면 validation 의존성을 따로 추가해야 사용할 수 있다.
+````java
+  implementation 'org.springframework.boot:spring-boot-starter-validation'
+````
+* @Valid Collection Validation 사용관련
+* https://github.com/HomoEfficio/dev-tips/wiki/SpringMVC%EC%97%90%EC%84%9C-Collection%EC%9D%98-Validation
+
 
 ## 4장 Exception ##
 ![2022-07-072](https://user-images.githubusercontent.com/24876345/177679376-5ddf97ad-88f7-4b4d-8118-1427b5bb0cf1.png)
