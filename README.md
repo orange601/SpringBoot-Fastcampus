@@ -55,5 +55,5 @@
 
 ![2022-07-07 11 45 06](https://user-images.githubusercontent.com/24876345/177679354-87256f5c-dfb3-43fa-8d43-766898c0d7e0.png)
 
-[출처-패스트캠퍼스](https://github.com/steve-developer/fastcampus-springboot-introduction/blob/master/06.%20%EC%8A%A4%ED%94%84%EB%A7%81%EC%9D%98%20%EA%B8%B0%EB%8A%A5%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/%EA%B0%95%EC%9D%98%EC%9E%90%EB%A3%8C/04.%20Spring%20Boot%20Exception%20%EC%B2%98%EB%A6%AC/04.%20Spring%20Boot%20Exception%20%EC%B2%98%EB%A6%AC.pdf
+[출처-패스트캠퍼스](https://github.com/steve-developer/fastcampus-springboot-introduction/blob/master/06.%20%EC%8A%A4%ED%94%84%EB%A7%81%EC%9D%98%20%EA%B8%B0%EB%8A%A5%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/%EA%B0%95%EC%9D%98%EC%9E%90%EB%A3%8C/04.%20Spring%20Boot%20Exception%20%EC%B2%98%EB%A6%AC/04.%20Spring%20Boot%20Exception%20%EC%B2%98%EB%A6%AC.pdf)
 
