@@ -40,6 +40,7 @@
 
 ### 예제설명 ###
 * BindingResult 파라미터로 @Valid의 결과 값을 확인 할 수 있다.
+* **@Validated** 는 GetMapping에서 자주 사용되고, **@valid** PostMapping에서  사용된다. 
 
 ### 주의사항 ###
 * spring boot 2.3 version 이상부터는 spring-boot-starter-web 의존성 내부에 있던 validation이 사라졌다.
