@@ -11,6 +11,8 @@
 
 [4.Exception](#4장-Exception)
 
+[5.Swagger](#5장-Swagger)
+
 ## 1장. IOC, DI ##
 
 ### 제어의 역전 ###
@@ -58,3 +60,16 @@
 
 [출처-패스트캠퍼스](https://github.com/steve-developer/fastcampus-springboot-introduction/blob/master/06.%20%EC%8A%A4%ED%94%84%EB%A7%81%EC%9D%98%20%EA%B8%B0%EB%8A%A5%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/%EA%B0%95%EC%9D%98%EC%9E%90%EB%A3%8C/04.%20Spring%20Boot%20Exception%20%EC%B2%98%EB%A6%AC/04.%20Spring%20Boot%20Exception%20%EC%B2%98%EB%A6%AC.pdf)
 
+
+## 5장 Swagger ##
+
+### 설명 ###
+* dependency 추가시 바로 사용가능
+* URL: localhost:8080/swagger-ui/ 
+* implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
+
+### 주의사항 ###
+* 스프링부트 2.6 이상으로 업그레이드 시 에러발생
+* spring boot 2.6.0부터 요청 경로를 ControllerHandler에 매칭시키기 위한 전략의 기본값이 ant_path_matcher 전략 -> path_pattern_parser 전략으로 변경되었기 때문이다.
+* 해결방법1: application.properties에 spring.mvc.pathmatch.matching-strategy=ant-path-matcher 추가
+* 해결방법2: spring boot의 버전을 2.5.x로 낮춘다.
