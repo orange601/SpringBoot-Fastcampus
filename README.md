@@ -44,8 +44,6 @@ Annotaion | 의미 |
 @AfterThrowing | 메소드 호출 실패 예외 발생 (Throws) |
 @Around | Before / after 모두제어 |
 
-![2022-07-07 11 26 49](https://user-images.githubusercontent.com/24876345/177677400-74a91bfb-655f-4a1e-bd8d-c56aabf0bc46.png)
-
 [출처-패스트캠퍼스](https://github.com/steve-developer/fastcampus-springboot-introduction/blob/master/05.%20Spring%20%EC%A1%B0%EA%B8%88%20%EB%8D%94%20%EB%93%A4%EC%97%AC%EB%8B%A4%EB%B3%B4%EA%B8%B0/%EA%B0%95%EC%9D%98%EC%9E%90%EB%A3%8C/03.%20AOP/03.%20AOP.pdf)
 
 ### 예제설명 ###
