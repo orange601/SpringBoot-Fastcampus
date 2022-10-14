@@ -1,5 +1,5 @@
-# Fastcampus
-강의내용정리
+# SpringBoot
+Springboot 활용 - Java/Spring 웹 개발 마스터 패스트캠퍼스
 
 ## 목차 ##
 
