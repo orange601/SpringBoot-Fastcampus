@@ -30,9 +30,20 @@
 
 
 
-## 2장. AOP ##
+## 2장. AOP ( 관점지향 프로그램 ) ##
 
-### 관점지향 프로그램 ###
+### 주요 Annotaion ###
+
+Annotaion | 의미 |
+--- | --- |
+@Aspect | 자바에서 널리 사용하는 AOP 프레임워크에 포함되며. AOP를 정의하는 Class에 할당 |
+@Pointcut | 기능을 어디에 적용시킬지, 메소드? Annotaion? 등 AOP를 적용 시킬 지점을 설정 |
+@Before | 메소드 실행하기 이전 |
+@After | 메소드가 성공적으로 실행 후, 예외가 발생 되더라도 실행 |
+@AfterReturning | 메소드 호출 성공 실패 시 (Not Throws) |
+@AfterThrowing | 메소드 호출 실패 예외 발생 (Throws) |
+@Around | Before / after 모두제어 |
+
 ![2022-07-07 11 26 49](https://user-images.githubusercontent.com/24876345/177677400-74a91bfb-655f-4a1e-bd8d-c56aabf0bc46.png)
 
 [출처-패스트캠퍼스](https://github.com/steve-developer/fastcampus-springboot-introduction/blob/master/05.%20Spring%20%EC%A1%B0%EA%B8%88%20%EB%8D%94%20%EB%93%A4%EC%97%AC%EB%8B%A4%EB%B3%B4%EA%B8%B0/%EA%B0%95%EC%9D%98%EC%9E%90%EB%A3%8C/03.%20AOP/03.%20AOP.pdf)
