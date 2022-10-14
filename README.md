@@ -73,12 +73,73 @@
 
 
 ## 4장 Exception ##
-![2022-07-072](https://user-images.githubusercontent.com/24876345/177679376-5ddf97ad-88f7-4b4d-8118-1427b5bb0cf1.png)
-
-![2022-07-07 11 45 06](https://user-images.githubusercontent.com/24876345/177679354-87256f5c-dfb3-43fa-8d43-766898c0d7e0.png)
+Web Application의 입장에서 바라 보았을때, 에러가 났을 때 내려줄 수 있는 방법은 많지 않다.
+1. 에러페이지
+2. 4XX Error or 5XX Error
+3. Client가 200 외에 처리를 하지 못할때는 200을 내려주고 별도의 에러 Message 전달
 
 [출처-패스트캠퍼스](https://github.com/steve-developer/fastcampus-springboot-introduction/blob/master/06.%20%EC%8A%A4%ED%94%84%EB%A7%81%EC%9D%98%20%EA%B8%B0%EB%8A%A5%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/%EA%B0%95%EC%9D%98%EC%9E%90%EB%A3%8C/04.%20Spring%20Boot%20Exception%20%EC%B2%98%EB%A6%AC/04.%20Spring%20Boot%20Exception%20%EC%B2%98%EB%A6%AC.pdf)
 
+
+### 예제 설명 ###
+1. exception
+    - DTO에서 Validation (이전에 Github에 올려놓음 [SpringBoot-Validation](https://github.com/orange601/SpringBoot-Validation))
+    - 전역 예외처리
+    ````java
+    @RestControllerAdvice // 특정 Api가 설정되지 않았기 때문에 Global로 설정된다.
+    ````
+2. Exception(Step2) ( 1번 Step 연장 )
+    - 특정 Controller만 예외처리
+    ````java
+    @RestControllerAdvice(basePackageClasses = ApiController.class) // 특정 Api설정
+    ````
+    - @Validated 를 이용한 Parameter Validation 체크
+    ````java
+    @GetMapping("") 
+    public User get(
+            @Size(min = 2)
+            @RequestParam String name,
+
+            @NotNull
+            @Min(1)
+            @RequestParam Integer age
+            ) {
+        User user = new User();
+        user.setName(name);
+        user.setAge(age);
+        int a = 10 + age;
+
+        return user;
+    }
+    ````
+    - Client를 위한 공통 Response 처리
+    ````java
+    {
+        "statusCode": "400 BAD_REQUEST",
+        "requestUrl": "/api/user",
+        "code": null,
+        "message": "",
+        "resultCode": "FAIL",
+        "errorList": [
+            {
+                "field": "age",
+                "message": "1 이상이어야 합니다",
+                "invalidValue": "0"
+            },
+            {
+                "field": "name",
+                "message": "크기가 2에서 2147483647 사이여야 합니다",
+                "invalidValue": ""
+            }
+        ]
+    }
+    ````
+
+### Annotation 별 기능 ###
+name | 설명
+---- | ----
+@ControllAdvice | Global 예외처리 및 특정 package / Controller 예외처리
+@ExceptionHandler | 특정 Contorller의 예외처리
 
 ## 5장 Swagger ##
 
