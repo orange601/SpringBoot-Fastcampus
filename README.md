@@ -45,9 +45,19 @@
 
 
 ## 3장. Validation ##
-![2022-07-07 11 15 38](https://user-images.githubusercontent.com/24876345/177676055-44198a35-4571-4a6e-ba7c-73149f49a7b4.png)
+
+### Validation 사용 이유 ###
+1. 검증해야 할 값이 많은 경우 코드의 길이가 길어 진다.
+2. 구현에 따라 달라질 수 있지만, Service Logic과 분리가 필요 하다.
+3. 흩어져 있는 경우 어디에서 검증을 하는지 알기 어려우며, 재사용의 한계가 있다.
+4. 구현에 따라 달라 질 수 있지만, 검증 Logic이 변경되어야 하는 부분이 발생 할 수 있다.
 
 [출처-패스트캠퍼스](https://github.com/steve-developer/fastcampus-springboot-introduction/blob/master/06.%20%EC%8A%A4%ED%94%84%EB%A7%81%EC%9D%98%20%EA%B8%B0%EB%8A%A5%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/%EA%B0%95%EC%9D%98%EC%9E%90%EB%A3%8C/01.%20Spring%20Boot%20Validation/01.%20Spring%20Boot%20Validation.pdf)
+
+### Validation Annotaion ###
+@NotNull: Null만 허용하지 않는다. "" 이나 " " 은 허용 한다.   
+@NotEmpty: null 과 "" 둘 다 허용하지 않는다. " " 은 허용   
+@NotBlank: null 과 "" 과 " " 모두 허용하지 않는다.
 
 ### 예제설명 ###
 * BindingResult 파라미터로 @Valid의 결과 값을 확인 할 수 있다.
