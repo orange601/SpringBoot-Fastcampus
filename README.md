@@ -17,8 +17,17 @@
 
 ### 제어의 역전 ###
 * JAVA 객체를 new로 생성하여 개발자가 관리하는 것이 아닌 Spring Container에 모두 맡긴다.
+
 ### 예제설명 ###
 * 예제에서는 ApplicationContext를 직접 생성했지만, 실무에서는 @Autowired를 사용하여 개발한다.
+
+### DI 장점 ###
+- 의존성으로 부터 격리시켜 코드테스트에 용이하다.
+- DI를 통하여 불가능한 상황을 Mock와 같은 기술을 통하여 안정적으로 테스트 가능하다.
+- 코드를 확장하거나 변경 할 때 영향을 최소화한다. (추상화)
+- 순환참조를 막을 수 있다.
+- [DI의간단한예제(spirng없이)](https://github.com/orange601/SpringBoot/tree/main/DI%EC%9D%98%EA%B0%84%EB%8B%A8%ED%95%9C%EC%98%88%EC%A0%9C(spirng%EC%97%86%EC%9D%B4))
+
 
 
 ## 2장. AOP ##
