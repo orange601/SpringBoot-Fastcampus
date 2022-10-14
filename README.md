@@ -31,6 +31,10 @@ Springboot 활용 - Java/Spring 웹 개발 마스터 in 패스트캠퍼스
 
 
 ## 2장. AOP ( 관점지향 프로그램 ) ##
+- 스프링 어플리케이션은 대부분 특별한 경우를 제외하고는 MVC 웹 어플리케이션에서는 Web Layer, Business Layer, Data Layer로 정의
+	+ **Web Layer:** Rest API를 제공하며, client 중심의 로직 적용
+	+ **Business Layer:** 내부 정책에 따른 Logic를 개발하며, 주로 해당 부분을 개발
+	+ **Data Layer:** 데이터 베이스 및 외부와의 연동을 담당
 
 ### 주요 Annotaion ###
 
