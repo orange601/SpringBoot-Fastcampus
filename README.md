@@ -164,5 +164,65 @@ name | 설명
 ### 주의사항 ###
 * 스프링부트 2.6 이상으로 업그레이드 시 에러발생
 * spring boot 2.6.0부터 요청 경로를 ControllerHandler에 매칭시키기 위한 전략의 기본값이 ant_path_matcher 전략 -> path_pattern_parser 전략으로 변경되었기 때문이다.
-* 해결방법1: application.properties에 spring.mvc.pathmatch.matching-strategy=ant-path-matcher 추가
-* 해결방법2: spring boot의 버전을 2.5.x로 낮춘다.
+
+**해결방법**
+1. application.properties에 spring.mvc.pathmatch.matching-strategy=ant-path-matcher 추가
+2. WebConfig 
+````java
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+        .allowedOrigins("*")
+        .allowedHeaders("*")
+        .exposedHeaders("/**")
+        .allowedMethods(
+    		HttpMethod.GET.name(),
+        	HttpMethod.HEAD.name(),
+        	HttpMethod.POST.name(),
+        	HttpMethod.PUT.name(),
+        	HttpMethod.DELETE.name());
+    }
+    
+    
+    
+	/**
+	 * Actuator(+spring fox PathPatternParser 이슈)
+	 * 참고: https://dev-minji.tistory.com/m/144
+	 * */
+	@Bean
+	public WebMvcEndpointHandlerMapping webEndpointServletHandlerMapping(WebEndpointsSupplier webEndpointsSupplier
+			, ServletEndpointsSupplier servletEndpointsSupplier
+			, ControllerEndpointsSupplier controllerEndpointsSupplier
+			, EndpointMediaTypes endpointMediaTypes
+			, CorsEndpointProperties corsProperties
+			, WebEndpointProperties webEndpointProperties
+			, Environment environment) {
+		        List<ExposableEndpoint<?>> allEndpoints = new ArrayList<>();
+		        Collection<ExposableWebEndpoint> webEndpoints = webEndpointsSupplier.getEndpoints();
+		        allEndpoints.addAll(webEndpoints);
+		        allEndpoints.addAll(servletEndpointsSupplier.getEndpoints());
+		        allEndpoints.addAll(controllerEndpointsSupplier.getEndpoints());
+		        String basePath = webEndpointProperties.getBasePath();
+		        EndpointMapping endpointMapping = new EndpointMapping(basePath);
+		        boolean shouldRegisterLinksMapping = this.shouldRegisterLinksMapping(
+	            		webEndpointProperties, environment, basePath);
+		        return new WebMvcEndpointHandlerMapping(
+	            		endpointMapping, webEndpoints, endpointMediaTypes, 
+	                    corsProperties.toCorsConfiguration(), 
+	                    new EndpointLinksResolver(allEndpoints, basePath), 
+	                    shouldRegisterLinksMapping, null);
+	}
+	
+	private boolean shouldRegisterLinksMapping(WebEndpointProperties webEndpointProperties
+			, Environment environment
+			, String basePath) {
+		return webEndpointProperties.getDiscovery().isEnabled() 
+				&& (StringUtils.hasText(basePath) 
+				|| ManagementPortType.get(environment).equals(ManagementPortType.DIFFERENT));
+	}
+
+}
+````
+3. application.properties에 management.endpoints.web.exposure.include=* 추
